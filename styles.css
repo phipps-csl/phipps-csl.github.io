@@ -6,3 +6,8 @@ border: 1px solid black;
 width: 215px;
 margin: 1em;
 }
+
+.locations #greenroof img{
+   width: 100%;
+   max-width: 200px;
+}
