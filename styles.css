@@ -6,8 +6,55 @@ border: 1px solid black;
 width: 215px;
 margin: 1em;
 }
-
 .locations #greenroof img{
    width: 100%;
    max-width: 200px;
+}
+
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media screen and (max-width: 736px) and (min-width: 414px) {
+	.locations{
+		border: none;
+		width: 100%;
+		margin: none;
+
+	}
+  .locations #greenroof img{
+    width: 80%;
+    max-width: none;
+  }
+}
+  /*ul li a {
+    padding-left: 30px;
+    background: url(email-icon.png) left center no-repeat;
+  }*/
+}
+/*Got the code below from: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/*/
+
+/*@media screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+/*@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}*/
+
+/* Landscape */
+/*@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
 }
