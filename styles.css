@@ -26,6 +26,15 @@ margin: 1em;
     width: 80%;
     max-width: none;
   }
+  .topic img{
+  	width: 25%;
+  	height: 25%;
+  	padding-left: 2px;
+  	padding-right: 2px;
+  	padding-top: 2px;
+  	padding-bottom: 2px;
+
+  }
 }
   /*ul li a {
     padding-left: 30px;
