@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
@@ -11,49 +10,43 @@
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <!--   <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
  -->
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../styles.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <!--   <link rel="icon" type="image/png" href="favicon.png">
  -->
 </head>
+
 <body>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="section" id="title">
-      <img src="building_icon.png">
-      <h1>The Living Building</h1>
-    </div>
-      <div class="section" id="flower">
-        <img src="flower_icon.png">
-        <p>A flower … one of nature’s most perfect expressions of beauty, elegance and efficiency.</p>
-        <p>What if a building could be like a flower? Operate just as elegantly and efficiently, be just as beautiful?</p>
-      </div>
-    </div>
-    <img id="cslphoto" src="csl1.jpg">
-    <div class="section" id="cslintro">
-      <p>The Center for Sustainable Landscapes strives to do just that: to blur the line between the built and natural environments, and demonstrate the beauty of living in harmony with the natural world.</p>
-      <p>How can a building operate as elegantly and efficiently as a flower?</p>
-    </div>
-    <div class="section" id="explore">
-      <img src="map.png">
-      <p>Explore the different locations of the CSL!</p>
-      <p>Use this guide to learn about the hidden stories of the CSL.</p>
-    </div>
-    <div id = "begintour">
-      <input type="button" onclick="location.href='greenroof.html';" value="Begin Tour" />
+  <div class="section">
+    <div class="locations">
+      <h2>Are comprised of integrated systems</h2>
+      <p>Roots absorb nutrients, leaves turn sunlight into energy, flowers attract pollinators: All of these systems working together is necessary for a plant’s success. The CSL needs all of its systems to work in concert to make it one of the greenest buildings on Earth.</p>
+      
+      <h4>Green Roof</h4>
+      <p>The weather station on the atrium roof is connected to the Building Automation System. This allows the building to react, like opening and closing windows, based on what is happening outside.</p>
+      
+      <h4>Interior</h4>
+      <p>Looking into the office space from the steps, you can see small boxes on the white pillars. These are sensors that measure air quality and inform the building controls how to make occupants comfortable using very little energy.</p>
+
+      <h4>Landscape</h4>
+      <p>The building and landscape are not separate entities but rather operate as one. For example, the concrete squares next to the boardwalk are the constructed wetland, which cleans building water for reuse.</p>
+
     </div>
   </div>
-
+  <div id = "tour">
+    <input type="button" onclick="location.href='../greenroof.html';" value="Green Roof" />
+    <input type="button" onclick="location.href='../interior.html';" value="Interior" />
+    <input type="button" onclick="location.href='../landscape.html';" value="Landscape" />
+  </div>
 </body>
 </html>
