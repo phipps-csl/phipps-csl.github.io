@@ -8,7 +8,6 @@
   <title>CSL Tour</title>
   <meta name="description" content="CSL Tour Skeleton">
   <meta name="author" content="">
-
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +19,7 @@
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel='stylesheet' type='text/css'>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -29,28 +29,30 @@
 <body>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="section">
-    <h1>The Living Building</h1>
-    <img src="images/phipps.JPG">
-  </div>
-  <div class="section">
-    <img src="images/flower.jpg">
-    <p>A flower … one of nature’s most perfect expressions of beauty, elegance and efficiency.</p>
-    <p>What if a building could be like a flower?
-Operate just as elegantly and efficiently, be just as beautiful?</p>
-  </div>
-  <div class="section">
-    <img src="images/csl.jpg">
-    <p>The Center for Sustainable Landscapes strives to do just that: to blur the line between the built and natural environments, and demonstrate the beauty of living in harmony with the natural world.</p>
-    <p>How can a building operate as elegantly and efficiently as a flower?</p>
-  </div>
-  <div class="section">
-<!--     <img src="graphic.png"> -->
-    <p>Explore the different locations of the CSL!</p>
-    <p>Use this guide to learn about the hidden stories of the CSL.</p>
-  </div>
-  <div id = "begintour">
-    <input type="button" onclick="location.href='greenroof.html';" value="Begin Tour" />
+  <div class="container">
+    <div class="section" id="title">
+      <img src="building_icon.png">
+      <h1>The Living Building</h1>
+    </div>
+      <div class="section" id="flower">
+        <img src="flower_icon.png">
+        <p>A flower … one of nature’s most perfect expressions of beauty, elegance and efficiency.</p>
+        <p>What if a building could be like a flower? Operate just as elegantly and efficiently, be just as beautiful?</p>
+      </div>
+    </div>
+    <img id="cslphoto" src="csl1.jpg">
+    <div class="section" id="cslintro">
+      <p>The Center for Sustainable Landscapes strives to do just that: to blur the line between the built and natural environments, and demonstrate the beauty of living in harmony with the natural world.</p>
+      <p>How can a building operate as elegantly and efficiently as a flower?</p>
+    </div>
+    <div class="section" id="explore">
+      <img src="map.png">
+      <p>Explore the different locations of the CSL!</p>
+      <p>Use this guide to learn about the hidden stories of the CSL.</p>
+    </div>
+    <div id = "begintour">
+      <input type="button" onclick="location.href='greenroof.html';" value="Begin Tour" />
+    </div>
   </div>
 
 
