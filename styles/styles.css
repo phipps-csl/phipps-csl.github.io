@@ -19,7 +19,8 @@
 * [A] Intro Page
 **/
 body {
-  background-color: #D1D4DF; }
+  background-color: #D1D4DF;
+  font-family: "Lato", sans-serif; }
 
 p {
   max-width: 600px;
