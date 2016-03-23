@@ -57,7 +57,8 @@ p {
 
 #cslintro {
   background-color: #ECE7C5;
-  color: #4A4B4F; }
+  color: #4A4B4F;
+  margin-top: -5px; }
 
 #explore {
   color: #FFF;
