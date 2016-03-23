@@ -1,0 +1,86 @@
+/**
+* Table of Contents
+* =======================
+* [1] Colors
+* [2] Fonts
+* [3] Spacing
+* [A] Intro Page
+**/
+
+/** 
+* [1] Colors
+**/
+$red: #E66E74;
+$blue: #4E628F;
+$darkGreen: #397B72;
+$lightGreen: #96D5AF;
+$white: #FFF;
+$black: #4A4B4F;
+$tan: #ECE7C5;
+$lightGrey: #D1D4DF;
+$darkGrey: #7A7C82;
+
+/** 
+* [2] Fonts
+**/ 
+$bodyText:  'Lato', sans-serif;
+
+/** 
+* [3] Spacing
+**/ 
+$bottom-spacing: 20px;
+$section-padding: 40px;
+
+/**
+* [A] Intro Page
+**/
+body {
+	background-color: $lightGrey;
+}
+p{
+	max-width: 600px;
+	width: 90%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:10px;
+}
+.section {
+	overflow:auto;
+  	padding-top: $section-padding;
+  	padding-bottom:$section-padding;
+  	img	 {
+  		margin-left: auto;
+  		margin-right: auto;
+  		display: block;
+  		margin-bottom: $bottom-spacing
+  	}
+}
+#title {
+	text-align:center;
+	color: $darkGreen;
+	img{
+		width: 300px;
+		margin-top: 60px;
+	}
+}
+#flower {
+	background-color: $lightGreen;
+	color: $white;
+	img{
+		width:150px;
+	}
+}
+#cslphoto {
+	width:100%;
+}
+#cslintro {
+	background-color:$tan;
+	color:$black;
+}
+#explore {
+	color:$white;
+	background-color: $red;
+	img{
+		width: 110px;
+	}
+}

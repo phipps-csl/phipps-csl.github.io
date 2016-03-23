@@ -1,0 +1,67 @@
+/**
+* Table of Contents
+* =======================
+* [1] Colors
+* [2] Fonts
+* [3] Spacing
+* [A] Intro Page
+**/
+/** 
+* [1] Colors
+**/
+/** 
+* [2] Fonts
+**/
+/** 
+* [3] Spacing
+**/
+/**
+* [A] Intro Page
+**/
+body {
+  background-color: #D1D4DF; }
+
+p {
+  max-width: 600px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px; }
+
+.section {
+  overflow: auto;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+  .section img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 20px; }
+
+#title {
+  text-align: center;
+  color: #397B72; }
+  #title img {
+    width: 300px;
+    margin-top: 60px; }
+
+#flower {
+  background-color: #96D5AF;
+  color: #FFF; }
+  #flower img {
+    width: 150px; }
+
+#cslphoto {
+  width: 100%; }
+
+#cslintro {
+  background-color: #ECE7C5;
+  color: #4A4B4F; }
+
+#explore {
+  color: #FFF;
+  background-color: #E66E74; }
+  #explore img {
+    width: 110px; }
+
+/*# sourceMappingURL=styles.css.map */
