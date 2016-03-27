@@ -66,4 +66,13 @@ p {
   #explore img {
     width: 110px; }
 
+/**
+* [B] Green Roof Page
+**/
+#intro {
+  text-align: center;
+  color: #397B72; }
+  #intro img {
+    width: 100%; }
+
 /*# sourceMappingURL=styles.css.map */
