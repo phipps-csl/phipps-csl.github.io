@@ -22,6 +22,12 @@
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
   <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel='stylesheet' type='text/css'>
 
+  <!-- JQuery CDN -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script>
+
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <!--   <link rel="icon" type="image/png" href="favicon.png">
@@ -30,16 +36,16 @@
 <body>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="section" id="title">
-      <img src="icons/building_icon.png">
-      <h1>The Living Building</h1>
+  <div data-role="page">
+    <div data-role="header" class="section" id="title"> 
+      <img src="icons/building_icon.png"> 
+      <h1>Living Building</h4>
     </div>
-      <div class="section" id="flower">
-        <img src="icons/flower_icon.png">
-        <p>A flower … one of nature’s most perfect expressions of beauty, elegance and efficiency.</p>
-        <p>What if a building could be like a flower? Operate just as elegantly and efficiently, be just as beautiful?</p>
-      </div>
+  <div data-role="content">
+    <div class="section" id="flower">
+      <img src="icons/flower_icon.png">
+      <p>A flower … one of nature’s most perfect expressions of beauty, elegance and efficiency.</p>
+      <p>What if a building could be like a flower? Operate just as elegantly and efficiently, be just as beautiful?</p>
     </div>
     <img id="cslphoto" src="photos/csl1.jpg">
     <div class="section" id="cslintro">
@@ -51,10 +57,16 @@
       <p>Explore the different locations of the CSL!</p>
       <p>Use this guide to learn about the hidden stories of the CSL.</p>
     </div>
-    <div id = "begintour">
-      <input type="button" onclick="location.href='greenroof.html';" value="Begin Tour" />
-    </div>
   </div>
-
 </body>
+<div data-role="footer" style="overflow:hidden;">
+  <div data-role="navbar">
+    <ul>
+      <li><a href="index.html" rel="external">Introduction</a></li>
+      <li><a href="greenroof.html" rel="external">Green Roof</a></li>
+      <li><a href="interior.html" rel="external">Interior</a></li>
+      <li><a href="landscape.html" rel="external">Landscape</a></li>
+    </ul>
+  </div><!-- /navbar -->
+</div><!-- /footer -->
 </html>
