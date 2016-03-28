@@ -19,7 +19,16 @@
  -->
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel='stylesheet' type='text/css'>
+  <!-- JQuery CDN -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script>
+
+  <!-- downloaded for JQuery Mobile Website -->
+  <!-- <script src="jquery.mobile-1.4.5.min.js"></script> -->
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -27,52 +36,51 @@
  -->
 </head>
 <body>
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="section">
-    <div class="locations">
-      <div id = "greenroof">
-        <img src="images/greenroof.jpg">
+  <div data-role="page">
+    <div data-role="header">  
+      <h4>Green Roof</h4>
+    </div>
+  <div data-role = "content">
+    <div data-role="collapsible-set">
+      <div data-role="collapsible">
+        <h4>Are powered by the sun</h4>
+        <p>The solar panels facing Panther Hollow and on the roof of the adjacent building generate more electricity than the CSL uses.</p>
       </div>
-      <h2>Green Roof</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-      <p>Click on one the topics to learn more:</p>
-      <!-- Links to each of the topics -->
-      <div class = "topic">
-        <a href="topics/sun.html" class = "topic1">
-          <!-- Sun Topic -->
-          <img src="images/sun-icon.jpg">
-        </a>
-        <a href="topics/water.html" class = "topic2">
-          <!-- Water Topic -->
-          <img src="images/water-icon.png">
-        </a>
-        <a href="topics/climate.html" class = "topic3">
-          <!-- Climate Topic -->
-          <img src="images/climate-icon.png">
-        </a>
-        <a href="topics/pollution.html" class = "topic4">
-          <!-- Pollution Topic -->
-          <img src="images/pollution-icon.png">
-        </a>
-        <a href="topics/integratedsystems.html" class = "topic5">
-          <!-- Integrated Systems Topic -->
-          <img src="images/integratedsystems-icon.gif">
-        </a>
-        <a href="topics/health.html" class = "topic6">
-          <!-- Health Topic -->
-          <img src="images/health-icon.png">
-        </a>
-        <a href="topics/beauty.html" class = "topic7">
-          <!-- Beauty Topic -->
-          <img src="images/beauty-icon.jpg">
-        </a>
+      <div data-role="collapsible">
+        <h4>Harvest their own water</h4>
+        <p>The 3-acre site around you puts roughly 3.25 million gallons to use each year. The green alone captured nearly 90% of rainwater that fell on it.</p>
+      </div>
+      <div data-role="collapsible">
+        <h4>Are adapted to climate and site</h4>
+        <p>As you can see from this vantage, the CSL building is long and narrow, which maximizes its southern exposure to take full advantage of the sun. This roof also insulates very well, keeping the building cooler in the summer and warmer in the winter.</p>
+      </div>
+      <div data-role="collapsible">
+        <h4>Operate pollution free</h4>
+        <p>When necessary, the large white box on the green roof mechanically heats or cools the CSL. It uses energy recovery ventilation, geothermal and renewable energy rather than fossil fuel.</p>
+      </div>
+      <div data-role="collapsible">
+        <h4>Are comprised of integrated systems</h4>
+        <p>The weather station on the atrium roof is connected to the Building Automation System. This allows the building to react, like opening and closing windows, based on what is happening outside.</p>
+      </div>
+      <div data-role="collapsible">
+        <h4>Promote health and well-being</h4>
+        <p>Utilizing the roof as a garden creates a beautiful space to grow edible and medicinal plants and provides much needed habitat and food for pollinators.</p>
+      </div>
+      <div data-role="collapsible">
+        <h4>Are beautiful</h4>
+        <p>Looking out from the green roof, the view encompasses everything from iconic bridges to green spaces to row houses dotting steep hills. Each speaks to the diversity, history and dynamism that define Pittsburgh and the connections we all share with each other and the planet.</p>
       </div>
     </div>
   </div>
-  <div id = "tour">
-    <input type="button" onclick="location.href='index.html';" value="Back" />
-    <input type="button" onclick="location.href='interior.html';" value="Next Location" />
-  </div>
 </body>
+<div data-role="footer">
+  <div data-role="navbar">
+    <ul>
+      <li><a href="index.html" rel="external">Introduction</a></li>
+      <li><a href="greenroof.html" rel="external">Green Roof</a></li>
+      <li><a href="interior.html" rel="external">Interior</a></li>
+      <li><a href="landscape.html" rel="external">Landscape</a></li>
+    </ul>
+  </div><!-- /navbar -->
+</div><!-- /footer -->
 </html>
