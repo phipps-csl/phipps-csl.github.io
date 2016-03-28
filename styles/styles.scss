@@ -103,6 +103,13 @@ p{
 	text-align:center;
 }
 
+.ui-bar, .ui-body {
+    position: relative;
+    padding: .4em 15px;
+    overflow: hidden;
+    display: block;
+    clear: both;
+}
 
 
 
