@@ -20,6 +20,13 @@
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel='stylesheet' type='text/css'>
+
+  <!-- JQuery CDN -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -29,22 +36,24 @@
 <body>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="section">
-    <div class="locations">
-      <div id = "interior">
-        <img src="images/interior.jpg">
-      </div>
-      <h2>Interior</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-      <p>Click on one the topics to learn more:</p>
-      <!-- Links to each of the topics -->
-      <div class = "topic">
-      </div>
+<body>
+  <div data-role="page">
+    <div data-role="header">  
+      <h4>Interior</h4>
     </div>
+  <div data-role="collapsible">
+    <h3></h3>
+    <p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p>
   </div>
-  <div id = "tour">
-    <input type="button" onclick="location.href='greenroof.html';" value="Back" />
-    <input type="button" onclick="location.href='landscape.html';" value="Next Location" />
-  </div>
+  <p>I'm a header click to expand contents</p>
 </body>
+<div data-role="footer" style="overflow:hidden;">
+  <div data-role="navbar">
+    <ul>
+      <li><a href="greenroof.html" rel="external">Green Roof</a></li>
+      <li><a href="interior.html" rel="external">Interior</a></li>
+      <li><a href="landscape.html" rel="external">Landscape</a></li>
+    </ul>
+  </div><!-- /navbar -->
+</div><!-- /footer -->
 </html>
