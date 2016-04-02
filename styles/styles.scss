@@ -5,6 +5,8 @@
 * [2] Fonts
 * [3] Spacing
 * [A] Intro Page
+* [B] Location pages
+* [C] Green Roof Page
 **/
 
 /** 
@@ -88,7 +90,32 @@ p{
 }
 
 /**
-* [B] Green Roof Page
+* [B] Location Pages
+**/
+.topic {
+	background-color: $white;
+	width: 280px;
+	height: 400px;
+	display: inline-block;
+	margin-left: 10px;
+	white-space:normal;
+	overflow:auto;
+
+}
+.list {
+display:block;
+height: 420px;
+padding-top: 10px;
+width: auto;
+overflow-x:scroll;
+overflow-y:hidden;
+white-space: nowrap;
+
+
+}
+
+/**
+* [C] Green Roof Page
 **/
 
 #intro {
@@ -110,6 +137,7 @@ p{
     display: block;
     clear: both;
 }
+
 
 
 
