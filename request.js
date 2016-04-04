@@ -1,18 +1,18 @@
 /* construct URL */
-var url = 'https://128.2.109.159/piwebapi/streams'
-   + '/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/plot';
-
+var url = 'https://128.2.109.159/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/plot';
 var response = null;
 /* GET request */
 function getData(){
 	$.ajax({
-    'url': url,
     'type': 'GET',
-    'Name': 'Phipps_IS',
-    'Password': 'Energy1?',
-    'xhrFields': {
-        'withCredentials': true
-    }, //only required for CORS
+    'url': url,
+    'crossDomain': 'True',
+    'headers': { 'Access-Control-Allow-Origin': '*' },
+    // 'Username': 'Phipps_IS',
+    // 'Password': 'Energy1?',
+    // 'xhrFields': {
+    //     'withCredentials': true
+    // }, //only required for CORS
     'success': function(response){
       /* do something with data returned */
       response = response;
@@ -21,4 +21,14 @@ function getData(){
     }
 	});
 }
+$( document ).ready(function() {
+});
+// function getData(){
+//   $.getJSON('https://128.2.109.159/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/plot', 
+//     function(json) {
+//       console.log(json);
+//   });
+// }
+
+// https://128.2.109.159/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/plot
 
