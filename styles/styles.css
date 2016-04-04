@@ -114,7 +114,8 @@ nav {
 
 nav ul {
   list-style: none;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-left: 0px; }
 
 nav ul li {
   float: left;
