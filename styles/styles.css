@@ -84,7 +84,8 @@ p {
     width: 300px; }
   .topic h3 {
     text-align: center;
-    margin-bottom: 20px; }
+    font-size: 1em;
+    margin-bottom: 12px; }
 
 .list {
   padding-top: 10px;
