@@ -115,7 +115,26 @@ p{
   display:block;
   margin-left: 100px;
 }
-
+.answers{
+  div{
+    margin-bottom:10px;
+    overflow:auto;
+    button{
+      background-color:$white;
+      float:left;
+      margin-left: 20px;
+      width: 120px;
+      height:20px;
+      line-height:0px;
+      text-align:center;
+      border:1px solid $lightGrey;
+      border-radius:10px;
+    }
+    button:hover{
+      background-color:$lightGrey;
+    }
+}
+}
 /**
 * [C] Green Roof Page
 **/

@@ -91,6 +91,22 @@ p {
   display: block;
   margin-left: 100px; }
 
+.answers div {
+  margin-bottom: 10px;
+  overflow: auto; }
+  .answers div button {
+    background-color: #FFF;
+    float: left;
+    margin-left: 20px;
+    width: 120px;
+    height: 20px;
+    line-height: 0px;
+    text-align: center;
+    border: 1px solid #D1D4DF;
+    border-radius: 10px; }
+  .answers div button:hover {
+    background-color: #D1D4DF; }
+
 /**
 * [C] Green Roof Page
 **/
