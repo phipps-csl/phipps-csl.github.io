@@ -224,8 +224,18 @@ nav ul li:last-child a {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px; }
 
-
-
+/**
+* [D] Interior Page
+**/
+#interior{
+  background-color:$white;
+}
+/**
+* [E] Landscape Page
+**/
+#landscape{
+  background-color:$white;
+}
 
 
 
