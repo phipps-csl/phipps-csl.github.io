@@ -22,7 +22,8 @@
 **/
 body {
   background-color: #D1D4DF;
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  color: #4A4B4F; }
 
 p {
   max-width: 600px;
@@ -73,25 +74,29 @@ p {
 **/
 .topic {
   background-color: #FFF;
-  width: 280px;
+  width: 300px;
   height: 400px;
-  display: inline-block;
-  margin-left: 10px;
-  white-space: normal;
-  overflow: auto; }
+  margin-bottom: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 0.5px solid #D1D4DF; }
+  .topic img {
+    width: 300px; }
+  .topic h3 {
+    text-align: center;
+    margin-bottom: 20px; }
 
 .list {
-  display: block;
-  height: 420px;
   padding-top: 10px;
-  width: auto;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap; }
+  display: block;
+  margin-left: 100px; }
 
 /**
 * [C] Green Roof Page
 **/
+#green_roof {
+  background-color: #FFF; }
+
 #intro {
   text-align: center;
   color: #397B72; }
