@@ -89,7 +89,9 @@ p {
 .list {
   padding-top: 10px;
   display: block;
-  margin-left: 100px; }
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .answers div {
   margin-bottom: 10px;
