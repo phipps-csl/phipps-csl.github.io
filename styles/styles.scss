@@ -41,30 +41,6 @@ body {
 	font-family: $bodyText;
   color: $black;
 }
-#int_header{
-  background-image: url("../images/atrium_roof.JPG");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size:100%;
-  display:block;
-  width:100%;
-  height:0;
-  padding-top:25%;
-  padding-bottom:25%;
-  h1{
-    font-size:2em;
-    text-align:center;
-    color: $white;
-    background-color:$black;
-    width:8em;
-    height:2em;
-    line-height:2;
-    margin-left:auto;
-    margin-right:auto;
-    border-radius:0.1em;
-  }
-  margin-bottom:3em;
-}
 p{
 	max-width: 600px;
 	width: 90%;
@@ -117,6 +93,29 @@ p{
 /**
 * [B] Location Pages
 **/
+.loc_header{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:100%;
+  display:block;
+  width:100%;
+  height:0;
+  padding-top:15%;
+  padding-bottom:35%;
+  h2{
+    font-size:1.2em;
+    text-align:center;
+    color: $black;
+    background-color:$white;
+    width:8em;
+    height:8em;
+    line-height:8;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:4em;
+  }
+  margin-bottom:3em;
+}
 .topic {
 	background-color: $white;
 	width: 300px;
@@ -166,18 +165,31 @@ p{
 **/
 #green_roof{
   background-color:$white;
-}
-#intro {
-	text-align:center;
-	color: $darkGreen;
-	img{
-		width: 100%;
-	}
+  .loc_header{
+    background-image: url("../images/greenroof.jpg");
+  }
 }
 
-#h4{
-	text-align:center;
+/**
+* [D] Interior Page
+**/
+#interior{
+  background-color:$white;
+  .loc_header{
+    background-image: url("../images/atriumroof.jpg");
+  }
+
 }
+/**
+* [E] Landscape Page
+**/
+#landscape{
+  .loc_header{
+    background-image: url("../images/landscape.jpg");
+  }
+  background-color:$white;
+}
+
 
 .ui-bar, .ui-body {
     position: relative;
@@ -249,22 +261,6 @@ nav ul li:first-child a {
 nav ul li:last-child a {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px; }
-
-/**
-* [D] Interior Page
-**/
-#interior{
-  background-color:$white;
-  img {
-    width:100%;
-  }
-}
-/**
-* [E] Landscape Page
-**/
-#landscape{
-  background-color:$white;
-}
 
 
 

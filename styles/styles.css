@@ -25,29 +25,6 @@ body {
   font-family: "Lato", sans-serif;
   color: #4A4B4F; }
 
-#int_header {
-  background-image: url("../images/atrium_roof.JPG");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100%;
-  display: block;
-  width: 100%;
-  height: 0;
-  padding-top: 25%;
-  padding-bottom: 25%;
-  margin-bottom: 3em; }
-  #int_header h1 {
-    font-size: 2em;
-    text-align: center;
-    color: #FFF;
-    background-color: #4A4B4F;
-    width: 8em;
-    height: 2em;
-    line-height: 2;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 0.1em; }
-
 p {
   max-width: 600px;
   width: 90%;
@@ -95,6 +72,28 @@ p {
 /**
 * [B] Location Pages
 **/
+.loc_header {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top: 15%;
+  padding-bottom: 35%;
+  margin-bottom: 3em; }
+  .loc_header h2 {
+    font-size: 1.2em;
+    text-align: center;
+    color: #4A4B4F;
+    background-color: #FFF;
+    width: 8em;
+    height: 8em;
+    line-height: 8;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4em; }
+
 .topic {
   background-color: #FFF;
   width: 300px;
@@ -138,15 +137,24 @@ p {
 **/
 #green_roof {
   background-color: #FFF; }
+  #green_roof .loc_header {
+    background-image: url("../images/greenroof.jpg"); }
 
-#intro {
-  text-align: center;
-  color: #397B72; }
-  #intro img {
-    width: 100%; }
+/**
+* [D] Interior Page
+**/
+#interior {
+  background-color: #FFF; }
+  #interior .loc_header {
+    background-image: url("../images/atriumroof.jpg"); }
 
-#h4 {
-  text-align: center; }
+/**
+* [E] Landscape Page
+**/
+#landscape {
+  background-color: #FFF; }
+  #landscape .loc_header {
+    background-image: url("../images/landscape.jpg"); }
 
 .ui-bar, .ui-body {
   position: relative;
@@ -220,19 +228,5 @@ nav ul li:first-child a {
 nav ul li:last-child a {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px; }
-
-/**
-* [D] Interior Page
-**/
-#interior {
-  background-color: #FFF; }
-  #interior img {
-    width: 100%; }
-
-/**
-* [E] Landscape Page
-**/
-#landscape {
-  background-color: #FFF; }
 
 /*# sourceMappingURL=styles.css.map */
