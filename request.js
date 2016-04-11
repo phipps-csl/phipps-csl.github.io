@@ -76,7 +76,7 @@ $( document ).ready(function() {
     });
   });
   
-  $('#buttonGraph').on('click', function() {
+   $('#buttonGraph').on('click', function() {
     $.ajax({
       type: "GET",
       xhrFields: {
@@ -84,9 +84,9 @@ $( document ).ready(function() {
       },
       dataType: "json",
       contentType: "application/javascript",
-      // async: true,
-      // crossDomain: true,
-      url: "https://128.2.109.159/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/plot",
+      async: true,
+      crossDomain: true,
+      url: "https://piserver.arc.cmu.edu/piwebapi/dataservers/s0MYhSMORGkyGTe9bdohw0AV0lOLTYyTlBVMkJWTDIw/points",
       username: 'Phipps_IS',
       password: 'Energy1?',
       success: function (jsonData) {
