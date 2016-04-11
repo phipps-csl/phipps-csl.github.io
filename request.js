@@ -91,7 +91,8 @@ $( document ).ready(function() {
       password: 'Energy1?',
       success: function (jsonData) {
           console.log("entered success");
-          var data = JSON.parse(jsonData)
+          //var data = JSON.parse(jsonData)
+          console.log(jsonData);
           console.log("Success");
           console.log(data);
       },
