@@ -76,7 +76,7 @@ $( document ).ready(function() {
     });
   });
   
-  $('#buttonGraph').on('click', function() {
+   $('#buttonGraph').on('click', function() {
     $.ajax({
       type: "GET",
       xhrFields: {
@@ -84,14 +84,15 @@ $( document ).ready(function() {
       },
       dataType: "json",
       contentType: "application/javascript",
-      // async: true,
-      // crossDomain: true,
-      url: "https://128.2.109.159/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/plot",
+      async: true,
+      crossDomain: true,
+      url: "https://piserver.arc.cmu.edu/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/recorded",
       username: 'Phipps_IS',
       password: 'Energy1?',
       success: function (jsonData) {
           console.log("entered success");
-          var data = JSON.parse(jsonData)
+          //var data = JSON.parse(jsonData)
+          console.log(jsonData);
           console.log("Success");
           console.log(data);
       },
