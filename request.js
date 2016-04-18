@@ -90,6 +90,7 @@ $( document ).ready(function() {
         data: hvacData.dataArray
       }]
     });
+    console.log("Ran Create Highcharts");
   } 
   ajaxRequest();
   createHighCharts();
