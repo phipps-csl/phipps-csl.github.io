@@ -72,6 +72,15 @@ p {
 /**
 * [B] Location Pages
 **/
+.hdr {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  background-color: #FFF;
+  text-align: center;
+  line-height: 3;
+  border-bottom: 1px solid #D1D4DF; }
+
 .loc_header {
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -82,17 +91,6 @@ p {
   padding-top: 15%;
   padding-bottom: 25%;
   margin-bottom: 3em; }
-  .loc_header h2 {
-    font-size: 1em;
-    text-align: center;
-    color: #4A4B4F;
-    background-color: #FFF;
-    width: 6em;
-    height: 6em;
-    line-height: 6;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 4em; }
 
 .topic {
   background-color: #FFF;
