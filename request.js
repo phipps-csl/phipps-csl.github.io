@@ -55,6 +55,8 @@ function ajaxRequest() {
       hvacData.categories.push(jsonData.Items[i].Timestamp);
     }
     console.log(hvacData);
+    hvacData.dataArray.reverse();
+    hvacData.categories.reverse();
     console.log("ended function code");
     return hvacData;
   }
