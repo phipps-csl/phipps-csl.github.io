@@ -2,7 +2,6 @@
 var url = 'https://128.2.109.159/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/plot';
 var response = null;
 
-var hvacData = {};
 function ajaxRequest() {
     console.log("started ajaxRequest()");
     var tok = 'Phipps_IS' + ':' + 'Energy1?';
@@ -98,6 +97,7 @@ function ajaxRequest() {
     console.log("Ran Create Highcharts");
   } 
 $( document ).ready(function() {
+  var hvacData = {};
   ajaxRequest();
   console.log("ran these lines");
   createHighCharts();
