@@ -94,7 +94,7 @@ $( document ).ready(function() {
     });
     console.log("Ran Create Highcharts");
   } 
-  ajaxRequest();
-  console.log("ran these lines");
-  createHighCharts();
+  // ajaxRequest();
+  // console.log("ran these lines");
+  // createHighCharts();
 });
