@@ -72,6 +72,18 @@ p {
 /**
 * [B] Location Pages
 **/
+.home {
+  border: 1px solid #DDD;
+  width: 50px;
+  height: 30px;
+  line-height: 1.8;
+  margin-top: 10px;
+  margin-left: -49%;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #666;
+  position: fixed; }
+
 .hdr {
   position: fixed;
   height: 50px;
