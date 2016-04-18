@@ -59,6 +59,10 @@ function ajaxRequest() {
   }
   function createHighCharts() {
     console.log("started createHighCharts");
+    console.log("hvacData.categories is:");
+    console.log(hvacData.categories);
+    console.log("hvacData.data is:");
+    console.log(hvacData.dataArray);
     $('#container').highcharts({
       title: {
         text: 'Phipps Electrical HVAC Consumption',
