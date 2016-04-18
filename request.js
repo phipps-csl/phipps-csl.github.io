@@ -5,6 +5,7 @@ var response = null;
 var hvacData = {};
 $( document ).ready(function() {
   function ajaxRequest() {
+    console.log("started ajaxRequest()");
     var tok = 'Phipps_IS' + ':' + 'Energy1?';
     hash = btoa(tok);
     authInfo = "Basic " + hash;
@@ -58,6 +59,7 @@ $( document ).ready(function() {
     return hvacData;
   }
   function createHighCharts() {
+    console.log("started createHighCharts");
     $('#container').highcharts({
       title: {
         text: 'Phipps Electrical HVAC Consumption',
