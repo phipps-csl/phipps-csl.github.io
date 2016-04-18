@@ -65,7 +65,7 @@ $( document ).ready(function() {
         x: -20 //center
       },
       xAxis: {
-        categories: hvacData.categories;
+        categories: hvacData.categories
       },
       yAxis: {
         title: {
@@ -88,7 +88,7 @@ $( document ).ready(function() {
       },
       series: [{
         name: 'Electrical HVAC',
-        data: hvacData.dataArray;
+        data: hvacData.dataArray
       }]
     });
   }); 
