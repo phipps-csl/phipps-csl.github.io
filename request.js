@@ -30,6 +30,7 @@ function ajaxRequest() {
         console.log("started init function call");
         hvacData = initHVACData(jsonData);
         console.log(hvacData);
+        createHighCharts(hvacData);
         console.log("ended init function call");
         // hvacData = jsonData;
     },
@@ -57,7 +58,7 @@ function ajaxRequest() {
     console.log("ended function code");
     return hvacData;
   }
-  function createHighCharts() {
+  function createHighCharts(hvacData) {
     console.log("started createHighCharts");
     console.log("HVAC is:");
     console.log(hvac);
@@ -101,6 +102,4 @@ function ajaxRequest() {
   } 
 $( document ).ready(function() {
   ajaxRequest();
-  console.log("ran these lines");
-  createHighCharts();
 });
