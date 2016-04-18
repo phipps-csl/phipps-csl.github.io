@@ -98,7 +98,7 @@ $( document ).ready(function() {
           //var data = JSON.parse(jsonData)
           console.log(jsonData);
           console.log("Success");
-          console.log(data);
+          console.log(jsonData);
       },
       error: function (request, textStatus, errorThrown) {
           console.log("Failure")
