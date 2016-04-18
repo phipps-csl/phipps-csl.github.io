@@ -52,7 +52,7 @@ function ajaxRequest() {
     hvacData.categories = [];
     for(i = max - 1; i >= min; i --) {
       hvacData.dataArray.push(jsonData.Items[i].Value);
-      hvacData.categories.push(jsonData.Items[i].Value);
+      hvacData.categories.push(jsonData.Items[i].Timestamp);
     }
     console.log(hvacData);
     console.log("ended function code");
