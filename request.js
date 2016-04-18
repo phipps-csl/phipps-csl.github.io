@@ -100,7 +100,7 @@ $( document ).ready(function() {
           console.log("Success");
           console.log(jsonData);
           console.log("started init function call");
-          initHVACData(jsonData);
+          hvacData = initHVACData(jsonData);
           console.log("ended init function call");
           // hvacData = jsonData;
       },
@@ -125,5 +125,6 @@ $( document ).ready(function() {
     }
     console.log(hvacData);
     console.log("ended function code");
+    return hvacData;
   }
 });
