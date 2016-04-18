@@ -4,59 +4,7 @@ var response = null;
 
 var hvacData = {};
 $( document ).ready(function() {
-  ajaxRequest();
-  $(function () {
-    $('#container').highcharts({
-      title: {
-        text: 'Phipps Electrical HVAC Consumption',
-        x: -20 //center
-      },
-      xAxis: {
-        categories: hvacData.categories;
-      },
-      yAxis: {
-        title: {
-          text: 'HVAC'
-        },
-        plotLines: [{
-          value: 0,
-          width: 1,
-          color: '#808080'
-        }]
-    },
-      tooltip: {
-        valueSuffix: 'HVAC'
-      },
-      legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle',
-        borderWidth: 0
-      },
-      series: [{
-        name: 'Electrical HVAC',
-        data: hvacData.dataArray;
-      }]
-    });
-  });
-
-  function initHVACData(jsonData){
-    // the data is capped at 1000 data points
-    console.log("started function code");
-    var max = 1000;
-    var min = 990;
-    hvacData.dataArray = [];
-    hvacData.categories = [];
-    for(i = max - 1; i >= min; i --) {
-      hvacData.dataArray.push(jsonData.Items[i].Value);
-      hvacData.categories.push(jsonData.Items[i].Value);
-    }
-    console.log(hvacData);
-    console.log("ended function code");
-    return hvacData;
-  }
-  
-   function ajaxRequest() {
+  function ajaxRequest() {
     var tok = 'Phipps_IS' + ':' + 'Energy1?';
     hash = btoa(tok);
     authInfo = "Basic " + hash;
@@ -93,4 +41,55 @@ $( document ).ready(function() {
       }
     });
   };
+
+  function initHVACData(jsonData){
+    // the data is capped at 1000 data points
+    console.log("started function code");
+    var max = 1000;
+    var min = 990;
+    hvacData.dataArray = [];
+    hvacData.categories = [];
+    for(i = max - 1; i >= min; i --) {
+      hvacData.dataArray.push(jsonData.Items[i].Value);
+      hvacData.categories.push(jsonData.Items[i].Value);
+    }
+    console.log(hvacData);
+    console.log("ended function code");
+    return hvacData;
+  }
+  ajaxRequest();
+  $(function () {
+    $('#container').highcharts({
+      title: {
+        text: 'Phipps Electrical HVAC Consumption',
+        x: -20 //center
+      },
+      xAxis: {
+        categories: hvacData.categories;
+      },
+      yAxis: {
+        title: {
+          text: 'HVAC'
+        },
+        plotLines: [{
+          value: 0,
+          width: 1,
+          color: '#808080'
+        }]
+    },
+      tooltip: {
+        valueSuffix: 'HVAC'
+      },
+      legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle',
+        borderWidth: 0
+      },
+      series: [{
+        name: 'Electrical HVAC',
+        data: hvacData.dataArray;
+      }]
+    });
+  }); 
 });
