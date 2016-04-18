@@ -1,45 +1,46 @@
 /* construct URL */
 var url = 'https://128.2.109.159/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/plot';
 var response = null;
+var hvacData = {};
 
 function ajaxRequest() {
-    console.log("started ajaxRequest()");
-    var tok = 'Phipps_IS' + ':' + 'Energy1?';
-    hash = btoa(tok);
-    authInfo = "Basic " + hash;
-    $.ajax({
-      type: "GET",
-      // xhrFields: {
-      //     withCredentials: true
-      // },
-      dataType: "json",
-      contentType: "application/javascript",
-      async: true,
-      crossDomain: true,
-      url: "https://piserver.arc.cmu.edu/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/recorded",
-      // username: 'Phipps_IS',
-      // password: 'Energy1?',
-      beforeSend: function (xhr) { xhr.setRequestHeader ("Authorization", authInfo); },
-      success: function (jsonData) {
-          console.log("entered success");
-          //var data = JSON.parse(jsonData)
-          console.log(jsonData);
-          console.log("Success");
-          console.log(jsonData);
-          console.log("started init function call");
-          hvacData = initHVACData(jsonData);
-          console.log(hvacData);
-          console.log("ended init function call");
-          // hvacData = jsonData;
-      },
-      error: function (request, textStatus, errorThrown) {
-          console.log("Failure")
-          console.log(request.responseText);
-          console.log(textStatus);
-          console.log(errorThrown);
-      }
-    });
-  };
+  console.log("started ajaxRequest()");
+  var tok = 'Phipps_IS' + ':' + 'Energy1?';
+  hash = btoa(tok);
+  authInfo = "Basic " + hash;
+  $.ajax({
+    type: "GET",
+    // xhrFields: {
+    //     withCredentials: true
+    // },
+    dataType: "json",
+    contentType: "application/javascript",
+    async: true,
+    crossDomain: true,
+    url: "https://piserver.arc.cmu.edu/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/recorded",
+    // username: 'Phipps_IS',
+    // password: 'Energy1?',
+    beforeSend: function (xhr) { xhr.setRequestHeader ("Authorization", authInfo); },
+    success: function (jsonData) {
+        console.log("entered success");
+        //var data = JSON.parse(jsonData)
+        console.log(jsonData);
+        console.log("Success");
+        console.log(jsonData);
+        console.log("started init function call");
+        hvacData = initHVACData(jsonData);
+        console.log(hvacData);
+        console.log("ended init function call");
+        // hvacData = jsonData;
+    },
+    error: function (request, textStatus, errorThrown) {
+        console.log("Failure")
+        console.log(request.responseText);
+        console.log(textStatus);
+        console.log(errorThrown);
+    }
+  });
+};
 
   function initHVACData(jsonData){
     // the data is capped at 1000 data points
@@ -58,6 +59,8 @@ function ajaxRequest() {
   }
   function createHighCharts() {
     console.log("started createHighCharts");
+    console.log("HVAC is:");
+    console.log(hvac);
     console.log("hvacData.categories is:");
     console.log(hvacData.categories);
     console.log("hvacData.data is:");
@@ -97,7 +100,6 @@ function ajaxRequest() {
     console.log("Ran Create Highcharts");
   } 
 $( document ).ready(function() {
-  var hvacData = {};
   ajaxRequest();
   console.log("ran these lines");
   createHighCharts();
