@@ -34,7 +34,18 @@ var response = null;
 //   console.log(saveData);
 // }
 
-
+function initHVACData(jsonData){
+  // the data is capped at 1000 data points
+  var max = 1000;
+  var min = 990;
+  hvacData.data = [];
+  hvacData.categories = [];
+  for(i = max - 1; i >= min; i --) {
+    hvacData.data.push(jsonData.Items[i].Value);
+    hvacData.categories.push(jsonData.Items[i].Value);
+  }
+  console.log(hvacData);
+}
 
 
 $( document ).ready(function() {
@@ -100,7 +111,8 @@ $( document ).ready(function() {
           console.log(jsonData);
           console.log("Success");
           console.log(jsonData);
-          hvacData = jsonData;
+          initHVACData(jsonData)
+          // hvacData = jsonData;
       },
       error: function (request, textStatus, errorThrown) {
           console.log("Failure")
