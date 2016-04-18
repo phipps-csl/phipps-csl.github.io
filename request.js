@@ -37,7 +37,7 @@ var response = null;
 
 
 $( document ).ready(function() {
-  var hvacData = null;
+  var hvacData = {};
   $(function () {
     $('#container').highcharts({
       title: {
