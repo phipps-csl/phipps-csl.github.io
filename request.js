@@ -117,10 +117,10 @@ $( document ).ready(function() {
     console.log("started function code");
     var max = 1000;
     var min = 990;
-    hvacData.data = [];
+    hvacData.dataArray = [];
     hvacData.categories = [];
     for(i = max - 1; i >= min; i --) {
-      hvacData.data.push(jsonData.Items[i].Value);
+      hvacData.dataArray.push(jsonData.Items[i].Value);
       hvacData.categories.push(jsonData.Items[i].Value);
     }
     console.log(hvacData);
