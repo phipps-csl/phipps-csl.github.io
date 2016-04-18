@@ -77,18 +77,22 @@ $( document ).ready(function() {
   });
   
    $('#buttonGraph').on('click', function() {
+    var tok = 'Phipps_IS' + ':' + 'Energy1?';
+    hash = btoa(tok);
+    authInfo = "Basic " + hash;
     $.ajax({
       type: "GET",
-      xhrFields: {
-          withCredentials: true
-      },
+      // xhrFields: {
+      //     withCredentials: true
+      // },
       dataType: "json",
       contentType: "application/javascript",
       async: true,
       crossDomain: true,
       url: "https://piserver.arc.cmu.edu/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/recorded",
-      username: 'Phipps_IS',
-      password: 'Energy1?',
+      // username: 'Phipps_IS',
+      // password: 'Energy1?',
+      beforeSend: function (xhr) { xhr.setRequestHeader ("Authorization", authInfo); },
       success: function (jsonData) {
           console.log("entered success");
           //var data = JSON.parse(jsonData)
