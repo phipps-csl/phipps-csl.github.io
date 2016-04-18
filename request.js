@@ -61,7 +61,7 @@ function ajaxRequest() {
   function createHighCharts(hvacData) {
     console.log("started createHighCharts");
     console.log("HVAC is:");
-    console.log(hvac);
+    console.log(hvacData);
     console.log("hvacData.categories is:");
     console.log(hvacData.categories);
     console.log("hvacData.data is:");
