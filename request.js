@@ -58,38 +58,36 @@ $( document ).ready(function() {
     return hvacData;
   }
   ajaxRequest();
-  $(function () {
-    $('#container').highcharts({
-      title: {
-        text: 'Phipps Electrical HVAC Consumption',
-        x: -20 //center
-      },
-      xAxis: {
-        categories: hvacData.categories
-      },
-      yAxis: {
-        title: {
-          text: 'HVAC'
-        },
-        plotLines: [{
-          value: 0,
-          width: 1,
-          color: '#808080'
-        }]
+  $('#container').highcharts({
+    title: {
+      text: 'Phipps Electrical HVAC Consumption',
+      x: -20 //center
     },
-      tooltip: {
-        valueSuffix: 'HVAC'
+    xAxis: {
+      categories: hvacData.categories
+    },
+    yAxis: {
+      title: {
+        text: 'HVAC'
       },
-      legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle',
-        borderWidth: 0
-      },
-      series: [{
-        name: 'Electrical HVAC',
-        data: hvacData.dataArray
+      plotLines: [{
+        value: 0,
+        width: 1,
+        color: '#808080'
       }]
-    });
+  },
+    tooltip: {
+      valueSuffix: 'HVAC'
+    },
+    legend: {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'middle',
+      borderWidth: 0
+    },
+    series: [{
+      name: 'Electrical HVAC',
+      data: hvacData.dataArray
+    }]
   }); 
 });
