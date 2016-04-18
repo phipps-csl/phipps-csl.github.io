@@ -1,7 +1,6 @@
 /* construct URL */
 var url = 'https://128.2.109.159/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/plot';
 var response = null;
-var hvacData;
 /* GET request */
 
 //   $.ajax({
@@ -39,6 +38,7 @@ var hvacData;
 
 
 $( document ).ready(function() {
+  var hvacData = null;
   $(function () {
     $('#container').highcharts({
       title: {
