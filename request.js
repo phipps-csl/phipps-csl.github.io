@@ -1,6 +1,7 @@
 /* construct URL */
 var url = 'https://128.2.109.159/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/plot';
 var response = null;
+var jsonData;
 /* GET request */
 
 //   $.ajax({
@@ -93,12 +94,13 @@ $( document ).ready(function() {
       // username: 'Phipps_IS',
       // password: 'Energy1?',
       beforeSend: function (xhr) { xhr.setRequestHeader ("Authorization", authInfo); },
-      success: function (jsonData) {
+      success: function (data) {
           console.log("entered success");
           //var data = JSON.parse(jsonData)
-          console.log(jsonData);
+          console.log(data);
           console.log("Success");
-          console.log(jsonData);
+          console.log(data);
+          jsonData = data;
       },
       error: function (request, textStatus, errorThrown) {
           console.log("Failure")
