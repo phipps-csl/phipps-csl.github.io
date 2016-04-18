@@ -99,9 +99,24 @@ p {
   margin-bottom: 10px;
   border-radius: 6px;
   overflow: hidden;
-  border: 0.5px solid #D1D4DF; }
-  .topic img {
-    width: 300px; }
+  border: 1px solid #D1D4DF; }
+  .topic .topic_img {
+    overflow: visible;
+    display: inline-block;
+    width: 100%;
+    background-image: url("../images/csl.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 150px;
+    border-bottom: 1px solid #D1D4DF; }
+    .topic .topic_img img {
+      width: 50px;
+      display: block;
+      border: 1px solid #D1D4DF;
+      border-radius: 6px;
+      margin-top: 110px;
+      margin-left: auto;
+      margin-right: auto; }
   .topic h3 {
     text-align: center;
     font-size: 1em;
@@ -114,21 +129,23 @@ p {
   margin-left: auto;
   margin-right: auto; }
 
-.answers div {
-  margin-bottom: 10px;
-  overflow: auto; }
-  .answers div button {
-    background-color: #FFF;
-    float: left;
-    margin-left: 20px;
-    width: 120px;
-    height: 20px;
-    line-height: 0px;
-    text-align: center;
-    border: 1px solid #D1D4DF;
-    border-radius: 10px; }
-  .answers div button:hover {
-    background-color: #D1D4DF; }
+.answers {
+  margin-top: 10px; }
+  .answers div {
+    margin-bottom: 10px;
+    overflow: auto; }
+    .answers div button {
+      background-color: #FFF;
+      float: left;
+      margin-left: 20px;
+      width: 120px;
+      height: 20px;
+      line-height: 0px;
+      text-align: center;
+      border: 1px solid #D1D4DF;
+      border-radius: 10px; }
+    .answers div button:hover {
+      background-color: #D1D4DF; }
 
 /**
 * [C] Green Roof Page
