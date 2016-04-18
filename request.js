@@ -35,9 +35,8 @@ var response = null;
 // }
 
 
-
+var hvacData = {};
 $( document ).ready(function() {
-  var hvacData = {};
   $(function () {
     $('#container').highcharts({
       title: {
@@ -75,6 +74,22 @@ $( document ).ready(function() {
       }]
     });
   });
+
+  function initHVACData(jsonData){
+    // the data is capped at 1000 data points
+    console.log("started function code");
+    var max = 1000;
+    var min = 990;
+    hvacData.dataArray = [];
+    hvacData.categories = [];
+    for(i = max - 1; i >= min; i --) {
+      hvacData.dataArray.push(jsonData.Items[i].Value);
+      hvacData.categories.push(jsonData.Items[i].Value);
+    }
+    console.log(hvacData);
+    console.log("ended function code");
+    return hvacData;
+  }
   
    $('#buttonGraph').on('click', function() {
     var tok = 'Phipps_IS' + ':' + 'Energy1?';
@@ -101,6 +116,7 @@ $( document ).ready(function() {
           console.log(jsonData);
           console.log("started init function call");
           hvacData = initHVACData(jsonData);
+          console.log(hvacData);
           console.log("ended init function call");
           // hvacData = jsonData;
       },
@@ -112,19 +128,4 @@ $( document ).ready(function() {
       }
     });
   });
-  function initHVACData(jsonData){
-    // the data is capped at 1000 data points
-    console.log("started function code");
-    var max = 1000;
-    var min = 990;
-    hvacData.dataArray = [];
-    hvacData.categories = [];
-    for(i = max - 1; i >= min; i --) {
-      hvacData.dataArray.push(jsonData.Items[i].Value);
-      hvacData.categories.push(jsonData.Items[i].Value);
-    }
-    console.log(hvacData);
-    console.log("ended function code");
-    return hvacData;
-  }
 });
