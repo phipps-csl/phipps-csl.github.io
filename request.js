@@ -1,47 +1,47 @@
 /* construct URL */
 var url = 'https://128.2.109.159/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/plot';
 var response = null;
-
 var hvacData = {};
-$( document ).ready(function() {
-  function ajaxRequest() {
-    console.log("started ajaxRequest()");
-    var tok = 'Phipps_IS' + ':' + 'Energy1?';
-    hash = btoa(tok);
-    authInfo = "Basic " + hash;
-    $.ajax({
-      type: "GET",
-      // xhrFields: {
-      //     withCredentials: true
-      // },
-      dataType: "json",
-      contentType: "application/javascript",
-      async: true,
-      crossDomain: true,
-      url: "https://piserver.arc.cmu.edu/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/recorded",
-      // username: 'Phipps_IS',
-      // password: 'Energy1?',
-      beforeSend: function (xhr) { xhr.setRequestHeader ("Authorization", authInfo); },
-      success: function (jsonData) {
-          console.log("entered success");
-          //var data = JSON.parse(jsonData)
-          console.log(jsonData);
-          console.log("Success");
-          console.log(jsonData);
-          console.log("started init function call");
-          hvacData = initHVACData(jsonData);
-          console.log(hvacData);
-          console.log("ended init function call");
-          // hvacData = jsonData;
-      },
-      error: function (request, textStatus, errorThrown) {
-          console.log("Failure")
-          console.log(request.responseText);
-          console.log(textStatus);
-          console.log(errorThrown);
-      }
-    });
-  };
+
+function ajaxRequest() {
+  console.log("started ajaxRequest()");
+  var tok = 'Phipps_IS' + ':' + 'Energy1?';
+  hash = btoa(tok);
+  authInfo = "Basic " + hash;
+  $.ajax({
+    type: "GET",
+    // xhrFields: {
+    //     withCredentials: true
+    // },
+    dataType: "json",
+    contentType: "application/javascript",
+    async: true,
+    crossDomain: true,
+    url: "https://piserver.arc.cmu.edu/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/recorded",
+    // username: 'Phipps_IS',
+    // password: 'Energy1?',
+    beforeSend: function (xhr) { xhr.setRequestHeader ("Authorization", authInfo); },
+    success: function (jsonData) {
+        console.log("entered success");
+        //var data = JSON.parse(jsonData)
+        console.log(jsonData);
+        console.log("Success");
+        console.log(jsonData);
+        console.log("started init function call");
+        hvacData = initHVACData(jsonData);
+        console.log(hvacData);
+        createHighCharts(hvacData);
+        console.log("ended init function call");
+        // hvacData = jsonData;
+    },
+    error: function (request, textStatus, errorThrown) {
+        console.log("Failure")
+        console.log(request.responseText);
+        console.log(textStatus);
+        console.log(errorThrown);
+    }
+  });
+};
 
   function initHVACData(jsonData){
     // the data is capped at 1000 data points
@@ -52,14 +52,22 @@ $( document ).ready(function() {
     hvacData.categories = [];
     for(i = max - 1; i >= min; i --) {
       hvacData.dataArray.push(jsonData.Items[i].Value);
-      hvacData.categories.push(jsonData.Items[i].Value);
+      hvacData.categories.push(jsonData.Items[i].Timestamp);
     }
     console.log(hvacData);
+    hvacData.dataArray.reverse();
+    hvacData.categories.reverse();
     console.log("ended function code");
     return hvacData;
   }
-  function createHighCharts() {
+  function createHighCharts(hvacData) {
     console.log("started createHighCharts");
+    console.log("HVAC is:");
+    console.log(hvacData);
+    console.log("hvacData.categories is:");
+    console.log(hvacData.categories);
+    console.log("hvacData.data is:");
+    console.log(hvacData.dataArray);
     $('#container').highcharts({
       title: {
         text: 'Phipps Electrical HVAC Consumption',
@@ -94,6 +102,6 @@ $( document ).ready(function() {
     });
     console.log("Ran Create Highcharts");
   } 
+$( document ).ready(function() {
   ajaxRequest();
-  createHighCharts();
 });
