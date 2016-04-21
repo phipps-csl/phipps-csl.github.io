@@ -1,9 +1,9 @@
 /* construct URL */
-var url = 'https://128.2.109.159/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/plot';
+var url = "https://piserver.arc.cmu.edu/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/recorded";
 var response = null;
 var hvacData = {};
 
-function ajaxRequest() {
+function ajaxRequest(url) {
   console.log("started ajaxRequest()");
   var tok = 'Phipps_IS' + ':' + 'Energy1?';
   hash = btoa(tok);
@@ -17,7 +17,7 @@ function ajaxRequest() {
     contentType: "application/javascript",
     async: true,
     crossDomain: true,
-    url: "https://piserver.arc.cmu.edu/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/recorded",
+    url: url,
     // username: 'Phipps_IS',
     // password: 'Energy1?',
     beforeSend: function (xhr) { xhr.setRequestHeader ("Authorization", authInfo); },
@@ -78,7 +78,7 @@ function ajaxRequest() {
       },
       yAxis: {
         title: {
-          text: 'HVAC'
+          text: 'kWh'
         },
         plotLines: [{
           value: 0,
@@ -87,7 +87,7 @@ function ajaxRequest() {
         }]
     },
       tooltip: {
-        valueSuffix: 'HVAC'
+        valueSuffix: 'kWh'
       },
       legend: {
         layout: 'vertical',
@@ -103,5 +103,8 @@ function ajaxRequest() {
     console.log("Ran Create Highcharts");
   } 
 $( document ).ready(function() {
-  ajaxRequest();
+  var url = "https://piserver.arc.cmu.edu/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/recorded";
+  ajaxRequest(url);
+  // url = "https://piserver.arc.cmu.edu/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0AE_YAAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19QVl9BTEw/recorded";
+  // ajaxRequest(url);
 });
