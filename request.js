@@ -78,6 +78,13 @@ function ajaxRequest(url) {
         verticalAlign: 'middle',
         borderWidth: 0
       },
+      plotOptions: {
+        series: {
+          events: {
+            false
+          }
+        }  
+      }
       series: [{
         name: 'Electrical HVAC',
         data: hvacData.dataArray,
