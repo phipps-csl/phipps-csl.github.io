@@ -237,4 +237,10 @@ nav ul li a:hover {
   color: #FFF;
   background-color: #7A7C82; }
 
+.not-active {
+  pointer-events: none;
+  cursor: default;
+  background-color: #7A7C82;
+  color: #FFF; }
+
 /*# sourceMappingURL=styles.css.map */

@@ -271,7 +271,12 @@ nav ul li a:hover{
     color:$white;
   background-color:$darkGrey;
 }
-
+.not-active {
+   pointer-events: none;
+   cursor: default;
+   background-color:$darkGrey;
+   color:$white;
+}
 
 
 
