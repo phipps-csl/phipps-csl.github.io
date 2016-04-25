@@ -227,7 +227,7 @@ nav ul li a {
   padding: 8px 0;
   display: block;
   width: 90%;
-  border: 2px solid #7A7C82;
+  border: 0.5px solid #7A7C82;
   background-color: #FFF;
   color: #7A7C82;
   border-radius: 8px; }
