@@ -106,6 +106,10 @@ p{
   position:fixed;
 }
 
+.open{
+  text-align:center;
+  margin-bottom:1em;
+}
 .hdr{
   z-index: 100;
   position:fixed;
@@ -228,8 +232,9 @@ p{
 }
 
 nav {
-  width: 100%;
-  margin: 20px 0; }
+  width: 95%;
+  margin-left:2.5%;
+}
 nav ul {
   list-style: none;
   overflow: hidden; 
@@ -242,47 +247,20 @@ nav ul li a {
   padding: 8px 0;
   display: block;
   width: 100%;
-  background: #cdeb8e; /* Old browsers */
-  background: -moz-linear-gradient(top,  
-    #cdeb8e 0%, #b0ca34 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, 
-    color-stop(0%,#cdeb8e), 
-    color-stop(100%,#b0ca34)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  
-    #cdeb8e 0%,#b0ca34 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  
-    #cdeb8e 0%,#b0ca34 100%); /* Opera 11.10+ */
-  background: linear-gradient(to bottom,  
-    #cdeb8e 0%,#b0ca34 100%); /* W3C, IE10+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( 
-    startColorstr='#cdeb8e', 
-    endColorstr='#b0ca34',GradientType=0 ); /* IE6-9 */
+  border: 2px solid $darkGrey;
+  background-color: $lightGrey;
+
   }
 nav ul li a,
 nav ul li a:focus,
 nav ul li a:visited,
-nav ul li a:hover,
-nav ul li a:active {
-  color: #000;
-  text-decoration: none; }
-nav ul li a:hover,
-nav ul li a:active {
-  background: #b0ca34; /* Old browsers */
-  background: -moz-linear-gradient(top,  
-    #b0ca34 0%, #96c40d 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, 
-    color-stop(0%,#b0ca34), 
-    color-stop(100%,#96c40d)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  
-    #b0ca34 0%,#96c40d 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  
-    #b0ca34 0%,#96c40d 100%); /* Opera 11.10+ */
-  background: linear-gradient(to bottom,  
-    #b0ca34 0%,#96c40d 100%); /* W3C, IE10+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( 
-    startColorstr='#b0ca34', 
-    endColorstr='#96c40d',GradientType=0 ); /* IE6-9 */
-  }
+nav ul li a:hover{
+  color:$white;
+  text-decoration: none;
+}
+nav ul li a:hover{
+  background-color:$darkGrey;
+}
 nav ul li:first-child a {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px; }
