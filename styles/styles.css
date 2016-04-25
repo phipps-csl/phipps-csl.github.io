@@ -126,7 +126,7 @@ p {
   background-color: #FFF;
   width: 300px;
   height: 400px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   border-radius: 6px;
   overflow: hidden;
   border: 1px solid #D1D4DF; }
@@ -227,6 +227,7 @@ nav ul li a {
   padding: 8px 0;
   display: block;
   width: 90%;
+  margin-left: 5%;
   border: 0.5px solid #7A7C82;
   background-color: #FFF;
   color: #7A7C82;
