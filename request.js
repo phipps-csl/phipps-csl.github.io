@@ -81,7 +81,12 @@ function ajaxRequest(url) {
       series: [{
         name: 'Electrical HVAC',
         data: hvacData.dataArray,
-        
+        // will always keep series on
+        events: {
+          legendItemClick: function(){
+            return false;
+          }
+        }
       }]
     });
   } 
