@@ -23,7 +23,8 @@
 body {
   background-color: #D1D4DF;
   font-family: "Lato", sans-serif;
-  color: #4A4B4F; }
+  color: #4A4B4F;
+  overflow: auto; }
 
 p {
   max-width: 600px;

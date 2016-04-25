@@ -40,6 +40,7 @@ body {
 	background-color: $lightGrey;
 	font-family: $bodyText;
   color: $black;
+  overflow:auto;
 }
 p{
 	max-width: 600px;
