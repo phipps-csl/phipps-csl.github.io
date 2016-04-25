@@ -221,22 +221,23 @@ nav ul li {
   float: left;
   width: 33%; }
 
+nav ul li a:focus,
+nav ul li a:visited,
+nav ul li a:hover {
+  text-decoration: none; }
+
 nav ul li a {
+  text-decoration: none;
   text-align: center;
   padding: 8px 0;
   display: block;
   width: 100%;
   border: 2px solid #7A7C82;
-  background-color: #D1D4DF; }
+  background-color: #D1D4DF;
+  color: #7A7C82; }
 
-nav ul li a,
-nav ul li a:focus,
-nav ul li a:visited,
 nav ul li a:hover {
   color: #FFF;
-  text-decoration: none; }
-
-nav ul li a:hover {
   background-color: #7A7C82; }
 
 nav ul li:first-child a {
