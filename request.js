@@ -57,6 +57,21 @@ function ajaxRequest(url) {
     console.log(hvacData);
     hvacData.dataArray.reverse();
     hvacData.categories.reverse();
+    for(i = 0; i < hvacData.categories.length; i++){
+      var a = hvacData.categories[i];
+      console.log(a);
+      // removing the last element
+      var date = (/[0-9]*\-[0-9]+T/.exec(a)[0]).slice(0,-1);
+      console.log(date);
+      // removing the first element
+      var time = (/T[0-9]*\:[0-9]*/.exec(a)[0]).substring(1);
+      console.log(time);
+      hvacData.categories[i] = date + " " + time;
+    }
+
+    "2016-04-24T07:50:00Z"
+    pattern = "/-[0-9]T"
+
     console.log("ended function code");
     return hvacData;
   }
