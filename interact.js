@@ -4,11 +4,13 @@
       button.style.borderColor = "#E66E74";
       button.style.textDecoration = "line-through";
       button.style.color = "#E66E74";
+      button.className += " animated shake";
       
     }
     else
     {
       button.style.borderColor = "#96D5AF";
       button.style.color = "#96D5AF";
+      button.className += " animated pulse";
     }
   }
