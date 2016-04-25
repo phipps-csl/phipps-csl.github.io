@@ -81,11 +81,14 @@ function ajaxRequest(url) {
       series: [{
         name: 'Electrical HVAC',
         data: hvacData.dataArray,
-        events: false
+        
       }]
     });
   } 
 $( document ).ready(function() {
   var url = "https://piserver.arc.cmu.edu/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/recorded";
   ajaxRequest(url);
+  var chart = $('#container').highcharts();
+  var series = chart.series;
+  series[0].show();
 });
