@@ -69,7 +69,7 @@ p{
 	}
 }
 #flower {
-	background-color: $lightGreen;
+	background-color: $darkGreen;
 	color: $white;
 	img{
 		width:150px;
@@ -209,7 +209,7 @@ p{
 * [C] Green Roof Page
 **/
 #green_roof{
-  background-color:$white;
+  background-image: url("../pattern/greenroof.png");
   .loc_header{
     background-image: url("../images/greenroof.jpg");
   }
@@ -219,7 +219,7 @@ p{
 * [D] Interior Page
 **/
 #interior{
-  background-color:$white;
+  background-image: url("../pattern/interior.png");
   .loc_header{
     background-image: url("../images/interior.jpg");
   }
@@ -229,22 +229,16 @@ p{
 * [E] Landscape Page
 **/
 #landscape{
+  background-color: $white;
+  background-image: url("../pattern/landscape.png");
   .loc_header{
     background-image: url("../images/landscape.jpg");
   }
-  background-color:$white;
 }
 
-
-.ui-bar, .ui-body {
-    position: relative;
-    padding: .4em 15px;
-    overflow: hidden;
-    display: block;
-    clear: both;
-}
 
 nav {
+  padding-top: 1em;
   width: 95%;
   margin-left:2.5%;
 }
@@ -265,22 +259,17 @@ nav ul li a {
   text-align: center;
   padding: 8px 0;
   display: block;
-  width: 100%;
+  width: 90%;
   border: 2px solid $darkGrey;
-  background-color: $lightGrey;
+  background-color: $white;
   color: $darkGrey;
+  border-radius:8px;
 
   }
 nav ul li a:hover{
     color:$white;
   background-color:$darkGrey;
 }
-nav ul li:first-child a {
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px; }
-nav ul li:last-child a {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px; }
 
 
 

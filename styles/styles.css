@@ -51,7 +51,7 @@ p {
     margin-top: 60px; }
 
 #flower {
-  background-color: #96D5AF;
+  background-color: #397B72;
   color: #FFF; }
   #flower img {
     width: 150px; }
@@ -181,7 +181,7 @@ p {
 * [C] Green Roof Page
 **/
 #green_roof {
-  background-color: #FFF; }
+  background-image: url("../pattern/greenroof.png"); }
   #green_roof .loc_header {
     background-image: url("../images/greenroof.jpg"); }
 
@@ -189,7 +189,7 @@ p {
 * [D] Interior Page
 **/
 #interior {
-  background-color: #FFF; }
+  background-image: url("../pattern/interior.png"); }
   #interior .loc_header {
     background-image: url("../images/interior.jpg"); }
 
@@ -197,18 +197,13 @@ p {
 * [E] Landscape Page
 **/
 #landscape {
-  background-color: #FFF; }
+  background-color: #FFF;
+  background-image: url("../pattern/landscape.png"); }
   #landscape .loc_header {
     background-image: url("../images/landscape.jpg"); }
 
-.ui-bar, .ui-body {
-  position: relative;
-  padding: .4em 15px;
-  overflow: hidden;
-  display: block;
-  clear: both; }
-
 nav {
+  padding-top: 1em;
   width: 95%;
   margin-left: 2.5%; }
 
@@ -231,21 +226,14 @@ nav ul li a {
   text-align: center;
   padding: 8px 0;
   display: block;
-  width: 100%;
+  width: 90%;
   border: 2px solid #7A7C82;
-  background-color: #D1D4DF;
-  color: #7A7C82; }
+  background-color: #FFF;
+  color: #7A7C82;
+  border-radius: 8px; }
 
 nav ul li a:hover {
   color: #FFF;
   background-color: #7A7C82; }
-
-nav ul li:first-child a {
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px; }
-
-nav ul li:last-child a {
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px; }
 
 /*# sourceMappingURL=styles.css.map */
