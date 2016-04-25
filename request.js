@@ -10,42 +10,25 @@ function ajaxRequest(url) {
   authInfo = "Basic " + hash;
   $.ajax({
     type: "GET",
-    // xhrFields: {
-    //     withCredentials: true
-    // },
     dataType: "json",
     contentType: "application/javascript",
     async: true,
     crossDomain: true,
     url: url,
-    // username: 'Phipps_IS',
-    // password: 'Energy1?',
     beforeSend: function (xhr) { xhr.setRequestHeader ("Authorization", authInfo); },
     success: function (jsonData) {
-        console.log("entered success");
-        //var data = JSON.parse(jsonData)
-        console.log(jsonData);
         console.log("Success");
-        console.log(jsonData);
-        console.log("started init function call");
         hvacData = initHVACData(jsonData);
-        console.log(hvacData);
         createHighCharts(hvacData);
-        console.log("ended init function call");
-        // hvacData = jsonData;
     },
     error: function (request, textStatus, errorThrown) {
         console.log("Failure")
-        console.log(request.responseText);
-        console.log(textStatus);
-        console.log(errorThrown);
     }
   });
 };
 
   function initHVACData(jsonData){
     // the data is capped at 1000 data points
-    console.log("started function code");
     var max = 1000;
     var min = 990;
     hvacData.dataArray = [];
@@ -57,17 +40,17 @@ function ajaxRequest(url) {
     console.log(hvacData);
     hvacData.dataArray.reverse();
     hvacData.categories.reverse();
-    console.log("ended function code");
+    for(i = 0; i < hvacData.categories.length; i++){
+      var a = hvacData.categories[i];
+      // removing the last element
+      var date = (/[0-9]*\-[0-9]+T/.exec(a)[0]).slice(0,-1);
+      // removing the first element
+      var time = (/T[0-9]*\:[0-9]*/.exec(a)[0]).substring(1);
+      hvacData.categories[i] = date + " " + time;
+    }
     return hvacData;
   }
   function createHighCharts(hvacData) {
-    console.log("started createHighCharts");
-    console.log("HVAC is:");
-    console.log(hvacData);
-    console.log("hvacData.categories is:");
-    console.log(hvacData.categories);
-    console.log("hvacData.data is:");
-    console.log(hvacData.dataArray);
     $('#container').highcharts({
       title: {
         text: 'Phipps Electrical HVAC Consumption',
@@ -78,7 +61,7 @@ function ajaxRequest(url) {
       },
       yAxis: {
         title: {
-          text: 'kWh'
+          text: 'kW'
         },
         plotLines: [{
           value: 0,
@@ -87,7 +70,7 @@ function ajaxRequest(url) {
         }]
     },
       tooltip: {
-        valueSuffix: 'kWh'
+        valueSuffix: 'kW'
       },
       legend: {
         layout: 'vertical',
@@ -97,14 +80,20 @@ function ajaxRequest(url) {
       },
       series: [{
         name: 'Electrical HVAC',
-        data: hvacData.dataArray
+        data: hvacData.dataArray,
+        // will always keep series on
+        events: {
+          legendItemClick: function(){
+            return false;
+          }
+        }
       }]
     });
-    console.log("Ran Create Highcharts");
   } 
 $( document ).ready(function() {
   var url = "https://piserver.arc.cmu.edu/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0ArhsBAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19FTEVDIEhWQUMgQUxMIENTTA/recorded";
   ajaxRequest(url);
-  // url = "https://piserver.arc.cmu.edu/piwebapi/streams/P0-MYhSMORGkyGTe9bdohw0AE_YAAAV0lOLTYyTlBVMkJWTDIwXFBISVBQU19QVl9BTEw/recorded";
-  // ajaxRequest(url);
+  var chart = $('#container').highcharts();
+  var series = chart.series;
+  series[0].show();
 });
