@@ -139,6 +139,8 @@ p {
     background-size: 100%;
     height: 150px;
     border-bottom: 1px solid #D1D4DF; }
+    .topic .topic_img iframe {
+      position: absolute; }
     .topic .topic_img img {
       width: 50px;
       display: block;
