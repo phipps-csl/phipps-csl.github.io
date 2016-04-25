@@ -61,7 +61,7 @@ function ajaxRequest(url) {
       },
       yAxis: {
         title: {
-          text: 'kWh'
+          text: 'kW'
         },
         plotLines: [{
           value: 0,
@@ -70,7 +70,7 @@ function ajaxRequest(url) {
         }]
     },
       tooltip: {
-        valueSuffix: 'kWh'
+        valueSuffix: 'kW'
       },
       legend: {
         layout: 'vertical',
@@ -80,7 +80,8 @@ function ajaxRequest(url) {
       },
       series: [{
         name: 'Electrical HVAC',
-        data: hvacData.dataArray
+        data: hvacData.dataArray,
+        visible: true
       }]
     });
   } 
