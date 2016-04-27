@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'GillSans';
+  font-weight: 200;
+  src: url("https://phipps.conservatory.org/assets/font/2A6CEA_1_0.eot");
+  src: url("https://phipps.conservatory.org/assets/font/2A6CEA_1_0.eot?#iefix") format("embedded-opentype"), url("https://phipps.conservatory.org/assets/font/2A6CEA_1_0.woff") format("woff"), url("https://phipps.conservatory.org/assets/font/2A6CEA_1_0.ttf") format("truetype"), url("https://phipps.conservatory.org/assets/font/2A6CEA_1_0.svg#Gill Sans Web") format("svg"); }
+
+@font-face {
+  font-family: 'GillSans';
+  font-weight: 200;
+  font-style: italic;
+  src: url("https://phipps.conservatory.org/assets/font/2A6CEA_2_0.eot");
+  src: url("https://phipps.conservatory.org/assets/font/2A6CEA_2_0.eot?#iefix") format("embedded-opentype"), url("https://phipps.conservatory.org/assets/font/2A6CEA_2_0.woff") format("woff"), url("https://phipps.conservatory.org/assets/font/2A6CEA_2_0.ttf") format("truetype"), url("https://phipps.conservatory.org/assets/font/2A6CEA_2_0.svg#Gill Sans Web") format("svg"); }
+
+@font-face {
+  font-family: 'GillSans';
+  font-weight: 300;
+  src: url("https://phipps.conservatory.org/assets/font/2A6CEA_6_0.eot");
+  src: url("https://phipps.conservatory.org/assets/font/2A6CEA_6_0.eot?#iefix") format("embedded-opentype"), url("https://phipps.conservatory.org/assets/font/2A6CEA_6_0.woff") format("woff"), url("https://phipps.conservatory.org/assets/font/2A6CEA_6_0.ttf") format("truetype"), url("https://phipps.conservatory.org/assets/font/2A6CEA_6_0.svg#Gill Sans Web") format("svg"); }
+
+@font-face {
+  font-family: 'GillSans';
+  font-weight: 300;
+  font-style: italic;
+  src: url("https://phipps.conservatory.org/assets/font/2A6CEA_7_0.eot");
+  src: url("https://phipps.conservatory.org/assets/font/2A6CEA_7_0.eot?#iefix") format("embedded-opentype"), url("https://phipps.conservatory.org/assets/font/2A6CEA_7_0.woff") format("woff"), url("https://phipps.conservatory.org/assets/font/2A6CEA_7_0.ttf") format("truetype"), url("https://phipps.conservatory.org/assets/font/2A6CEA_7_0.svg#Gill Sans Web") format("svg"); }
+
+@font-face {
+  font-family: 'GillSans';
+  font-weight: 400;
+  src: url("https://phipps.conservatory.org/assets/font/2A6CEA_3_0.eot");
+  src: url("https://phipps.conservatory.org/assets/font/2A6CEA_3_0.eot?#iefix") format("embedded-opentype"), url("https://phipps.conservatory.org/assets/font/2A6CEA_3_0.woff") format("woff"), url("https://phipps.conservatory.org/assets/font/2A6CEA_3_0.ttf") format("truetype"), url("https://phipps.conservatory.org/assets/font/2A6CEA_3_0.svg#Gill Sans Web") format("svg"); }
+
+@font-face {
+  font-family: 'GillSans';
+  font-weight: 400;
+  font-style: italic;
+  src: url("https://phipps.conservatory.org/assets/font/2A6CEA_0_0.eot");
+  src: url("https://phipps.conservatory.org/assets/font/2A6CEA_0_0.eot?#iefix") format("embedded-opentype"), url("https://phipps.conservatory.org/assets/font/2A6CEA_0_0.woff") format("woff"), url("https://phipps.conservatory.org/assets/font/2A6CEA_0_0.ttf") format("truetype"), url("https://phipps.conservatory.org/assets/font/2A6CEA_0_0.svg#Gill Sans Web") format("svg"); }
+
+@font-face {
+  font-weight: 600;
+  font-family: 'GillSans';
+  src: url("https://phipps.conservatory.org/assets/font/2A6CEA_4_0.eot");
+  src: url("https://phipps.conservatory.org/assets/font/2A6CEA_4_0.eot?#iefix") format("embedded-opentype"), url("https://phipps.conservatory.org/assets/font/2A6CEA_4_0.woff") format("woff"), url("https://phipps.conservatory.org/assets/font/2A6CEA_4_0.ttf") format("truetype"), url("https://phipps.conservatory.org/assets/font/2A6CEA_4_0.svg#Gill Sans Web") format("svg"); }
+
+@font-face {
+  font-family: 'GillSans';
+  font-weight: 600;
+  font-style: italic;
+  src: url("https://phipps.conservatory.org/assets/font/2A6CEA_5_0.eot");
+  src: url("https://phipps.conservatory.org/assets/font/2A6CEA_5_0.eot?#iefix") format("embedded-opentype"), url("https://phipps.conservatory.org/assets/font/2A6CEA_5_0.woff") format("woff"), url("https://phipps.conservatory.org/assets/font/2A6CEA_5_0.ttf") format("truetype"), url("https://phipps.conservatory.org/assets/font/2A6CEA_5_0.svg#Gill Sans Web") format("svg"); }
